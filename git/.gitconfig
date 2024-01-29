@@ -1,0 +1,10 @@
+[user]
+	email = ohinibla@gmail.com
+	name = babak
+	signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIAU+vZF1lE0OiHUwVa7qkAtIdjqS1h7oWgJymXzSSJSO
+[gpg]
+	format = ssh
+[gpg "ssh"]
+	program = /opt/1Password/op-ssh-sign
+[commit]
+  gpgsign = true
