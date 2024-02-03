@@ -15,6 +15,10 @@ lvim.builtin.which_key.mappings["s"]["T"] = {
   "<CMD>Telescope tags<CR>", "Search Workspace tags"
 }
 
+lvim.builtin.which_key.vmappings["s"] = {
+  "<cmd>lua require('ssr').open()<CR>", "search and replace"
+}
+
 lvim.builtin.which_key.mappings["C"] = {
   name = "Python",
   c = { "<cmd>lua require('swenv.api').pick_venv()<cr>", "Choose Env" },
