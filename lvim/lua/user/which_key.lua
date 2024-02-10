@@ -1,5 +1,4 @@
 -- Use which-key to add extra bindings with the leader-key prefix
-
 lvim.builtin.which_key.mappings["P"] = { "<cmd>Telescope projects<CR>", "Projects" }
 lvim.builtin.which_key.mappings["t"] = {
   name = "+Trouble",
@@ -17,6 +16,17 @@ lvim.builtin.which_key.mappings["s"]["T"] = {
 
 lvim.builtin.which_key.vmappings["s"] = {
   "<cmd>lua require('ssr').open()<CR>", "search and replace"
+}
+
+local lazygit_toggle = require("user.functions").lazygit_toggle
+local gh_workflow_toggle = require("user.functions").gh_workflow_list
+
+lvim.builtin.which_key.mappings["g"]["g"] = {
+  lazygit_toggle, "LazyGit"
+}
+
+lvim.builtin.which_key.mappings["g"]["h"] = {
+  gh_workflow_toggle, "LazyGit"
 }
 
 lvim.builtin.which_key.mappings["C"] = {

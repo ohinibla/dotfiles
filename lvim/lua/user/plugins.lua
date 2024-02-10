@@ -1,6 +1,7 @@
 -- Additional Plugins
 
 lvim.plugins = {
+  { "ggandor/leap.nvim" },
   {
     "nvim-treesitter/nvim-treesitter-textobjects",
     after = "nvim-treesitter",

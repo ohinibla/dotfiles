@@ -1,6 +1,6 @@
 -- neovide font
 vim.opt.termguicolors = true
-vim.opt.guifont = "JetBrainsMono Nerd Font:h12.5"
+vim.opt.guifont = "JetBrainsMono Nerd Font:h14"
 vim.opt.background = "dark"
 lvim.colorscheme = "gruvbox"
 
