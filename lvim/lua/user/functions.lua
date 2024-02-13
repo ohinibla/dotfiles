@@ -35,4 +35,21 @@ M.gh_workflow_list = function()
   workflow:toggle(40)
 end
 
+M.show_selection_count = function()
+  local starts = vim.fn.line("v")
+  local ends = vim.fn.line(".")
+  local count = starts <= ends and ends - starts + 1 or starts - ends + 1
+  local wc = vim.fn.wordcount()
+  return count .. ":" .. wc["visual_chars"]
+end
+
+M.show_macro_recording = function()
+  local recording_register = vim.fn.reg_recording()
+  if recording_register == "" then
+    return ""
+  else
+    return "Recording @" .. recording_register
+  end
+end
+
 return M
