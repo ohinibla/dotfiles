@@ -21,7 +21,7 @@ for _, plugin in ipairs({
   "dressing",
   "clever-f",
   "ChatGPT",
-  "tint",
+  -- "tint",
   "kanagawa",
 }) do
   lvim.plugins[#lvim.plugins + 1] = require("user.plugins_dir." .. plugin)

@@ -1,11 +1,25 @@
 -- install plugins
-lvim.plugins = {
-  "ChristianChiarulli/swenv.nvim",
+for _, plugin in ipairs({
+  { "AckslD/swenv.nvim",
+    opts = {
+      get_venvs = function(venvs_path)
+        local poetry_envs = require('user.functions').get_poetry_envs()
+        local envs = require('swenv.api').get_venvs(venvs_path)
+        vim.list_extend(envs, poetry_envs)
+        return envs
+      end,
+      post_set_venv = function()
+        vim.cmd("LspRestart")
+      end
+    }
+  },
   "stevearc/dressing.nvim",
   "mfussenegger/nvim-dap-python",
   "nvim-neotest/neotest",
   "nvim-neotest/neotest-python",
-}
+}) do
+  lvim.plugins[#lvim.plugins + 1] = plugin
+end
 
 -- automatically install python syntax highlighting
 lvim.builtin.treesitter.ensure_installed = {
@@ -55,7 +69,6 @@ lvim.builtin.which_key.mappings["dS"] = { "<cmd>lua require('neotest').summary.t
 
 
 -- binding for switching
-lvim.builtin.which_key.mappings["C"] = {
-  name = "Python",
-  c = { "<cmd>lua require('swenv.api').pick_venv()<cr>", "Choose Env" },
+lvim.builtin.which_key.mappings["dz"] = {
+  { "<cmd>lua require('swenv.api').pick_venv()<cr>", "Choose Env" },
 }

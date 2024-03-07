@@ -11,6 +11,7 @@ linters.setup {
   {
     command = "codespell",
     ---@usage specify which filetypes to enable. By default a providers will attach to all the filetypes it supports.
-    filetypes = { "javascript", "python" },
+    -- filetypes = { "javascript", "python" },
+    filetypes = { "javascript" },
   },
 }

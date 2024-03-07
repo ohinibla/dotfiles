@@ -1,5 +1,35 @@
 local M = {}
 
+M.get_poetry_envs = function()
+  local Path = require('plenary.path')
+  local scan_dir = require('plenary.scandir').scan_dir
+  local get_venvs_for = function(base_path, source, opts)
+    local venvs = {}
+    if base_path == nil then
+      return venvs
+    end
+    local paths = scan_dir(base_path, vim.tbl_extend('force', { depth = 1, only_dirs = true, silent = true }, opts or {}))
+    for _, path in ipairs(paths) do
+      table.insert(venvs, {
+        name = Path:new(path):make_relative(base_path),
+        path = path,
+        source = source,
+      })
+    end
+    return venvs
+  end
+  local get_poetry_root = function()
+    local poetry_root = vim.fn.getenv('POETRY_ROOT')
+    if poetry_root == vim.NIL then
+      return nil
+    else
+      return Path:new(poetry_root) .. 'virtualenvs'
+    end
+  end
+  local poetry_env_path = get_venvs_for(get_poetry_root(), 'poetry', { only_dirs = true })
+  return poetry_env_path
+end
+
 M.lazygit_toggle = function()
   local Terminal = require("toggleterm.terminal").Terminal
   local lazygit = Terminal:new {

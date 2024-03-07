@@ -1,9 +1,9 @@
 -- -- set a formatter, this will override the language server formatting capabilities (if it exists)
 local formatters = require "lvim.lsp.null-ls.formatters"
 formatters.setup {
-  { command = "black",    filetypes = { "python" } },
-  { command = "autopep8", filetypes = { "python" } },
-  { command = "isort",    filetypes = { "python" } },
+  -- { command = "black",    filetypes = { "python" } },
+  -- { command = "autopep8", filetypes = { "python" } },
+  -- { command = "isort",    filetypes = { "python" } },
   {
     -- each formatter accepts a list of options identical to https://github.com/jose-elias-alvarez/null-ls.nvim/blob/main/doc/BUILTINS.md#Configuration
     command = "prettier",
