@@ -26,7 +26,7 @@ lvim.builtin.which_key.mappings["g"]["g"] = {
 }
 
 lvim.builtin.which_key.mappings["g"]["h"] = {
-  gh_workflow_toggle, "LazyGit"
+  gh_workflow_toggle, "Github Actions"
 }
 
 lvim.builtin.which_key.mappings["q"] = { "<cmd>confirm q<CR>", "Quit" }
