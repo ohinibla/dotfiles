@@ -70,9 +70,9 @@ command = "kitty --class elia -e elia-proxy"
 class = "elia"
 size = "85% 75%"
 
-[scratchpads.htop]
+[scratchpads.top]
 animation = "fromTop"
-command = "kitty --class htop -e htop"
+command = "kitty --class btop -e btop"
 class = "htop"
 size = "75% 60%"
 
