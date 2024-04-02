@@ -32,7 +32,7 @@ formatters.setup { { name = "black" }, }
 
 -- setup linting
 local linters = require "lvim.lsp.null-ls.linters"
-linters.setup { { command = "flake8", filetypes = { "python" } } }
+-- linters.setup { { command = "flake8", filetypes = { "python" } } }
 
 -- setup debug adapter
 lvim.builtin.dap.active = true
@@ -56,6 +56,8 @@ require("neotest").setup({
     })
   }
 })
+
+lvim.keys.normal_mode["<F3>"] = ":!python %<CR>"
 
 lvim.builtin.which_key.mappings["dm"] = { "<cmd>lua require('neotest').run.run()<cr>",
   "Test Method" }

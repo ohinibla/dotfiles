@@ -9,7 +9,6 @@ lvim.keys.normal_mode["<C-V>"] = false
 -- lvim.keys.normal_mode["gx"] = [[:execute '!firefox ' . shellescape(expand('<cfile>'), 1)<CR>]]
 lvim.keys.normal_mode['<A-">'] = "ciw"
 lvim.keys.insert_mode["jk"] = "<ESC>"
-lvim.keys.normal_mode["<F5>"] = ":!python %<CR>"
 lvim.keys.normal_mode["<F8>"] = ":Vista!!<CR>"
 lvim.keys.normal_mode["<F9>"] = vim.cmd.UndotreeToggle
 lvim.keys.normal_mode["<right>"] = vim.cmd.NoNeckPain
