@@ -13,6 +13,11 @@ lvim.keys.normal_mode["<F8>"] = ":Vista!!<CR>"
 lvim.keys.normal_mode["<F9>"] = vim.cmd.UndotreeToggle
 lvim.keys.normal_mode["<right>"] = vim.cmd.NoNeckPain
 
+-- leap mappings
+vim.keymap.set({ 'n', 'x', 'o' }, 's', '<Plug>(leap-forward)')
+vim.keymap.set({ 'n', 'x', 'o' }, 'S', '<Plug>(leap-backward)')
+vim.keymap.set({ 'n', 'x', 'o' }, 'gs', '<Plug>(leap-from-window)')
+
 -- unmap a default keymapping
 -- vim.keymap.del("n", "<C-Up>")
 -- override a default keymapping

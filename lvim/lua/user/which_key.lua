@@ -10,8 +10,9 @@ lvim.builtin.which_key.mappings["t"] = {
   w = { "<cmd>Trouble workspace_diagnostics<cr>", "Workspace Diagnostics" },
 }
 
+-- TODO: notify user when generating tags and handle errors
 lvim.builtin.which_key.mappings["s"]["T"] = {
-  "<CMD>Telescope tags<CR>", "Search Workspace tags"
+  "<CMD>!ctags -R %<CR><CMD>Telescope tags<CR>", "Search Workspace tags"
 }
 
 lvim.builtin.which_key.vmappings["s"] = {
