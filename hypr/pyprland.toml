@@ -82,3 +82,9 @@ unknown = "wlrlui"
 [monitors.placement]
 "Ancor".leftOf = ["LG"]
 #<D-a> "Sony".topOf = ["Brand X"]
+
+[layout_center]
+margin = 60
+offset = [0, 30]
+next = "movefocus l"
+prev = "movefocus h"
