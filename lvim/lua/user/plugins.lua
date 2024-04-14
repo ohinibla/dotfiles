@@ -17,6 +17,7 @@ for _, plugin in ipairs({
   "leap",
   "noice",
   "no-neck-pain",
+  "icon-picker",
   "gruvbox",
   "goto-preview",
   "glow",
