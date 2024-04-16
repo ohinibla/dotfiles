@@ -4,7 +4,7 @@ for _, plugin in ipairs({
   "vim-surround",
   "vim-signature",
   "vim-sanegx",
-  "vim-notify",
+  -- "vim-notify",
   "vim-jsx-pretty",
   "vim-javascript",
   "undotree",

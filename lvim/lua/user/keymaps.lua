@@ -18,6 +18,14 @@ vim.keymap.set({ 'n', 'x', 'o' }, 's', '<Plug>(leap-forward)')
 vim.keymap.set({ 'n', 'x', 'o' }, 'S', '<Plug>(leap-backward)')
 vim.keymap.set({ 'n', 'x', 'o' }, 'gs', '<Plug>(leap-from-window)')
 
+
+-- Adding the following keymap, will redirect the active cmdline when pressing <S-Enter>.
+-- The cmdline stays open, so you can change the command and execute it again.
+-- When exiting the cmdline, the popup window will be focused.
+vim.keymap.set("c", "<S-Enter>", function()
+  require("noice").redirect(vim.fn.getcmdline())
+end, { desc = "Redirect Cmdline" })
+
 -- unmap a default keymapping
 -- vim.keymap.del("n", "<C-Up>")
 -- override a default keymapping
