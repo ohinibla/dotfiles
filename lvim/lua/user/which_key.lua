@@ -69,7 +69,9 @@ lvim.builtin.which_key.mappings["C"] = {
   l = { "<cmd>ChatGPTRun code_readability_analysis<CR>", "Code Readability Analysis", mode = { "n", "v" } },
 }
 
-
--- lvim.builtin.which_key.mappings["L"].p = {
---   "<cmd>! git --git-dir C:\\Users\\AppData\\Local\\lvim\\.git\\ --work-tree C:\\Users\\AppData\\Local\\lvim\\ add *<cr><cmd>! git --git-dir C:\\Users\\AppData\\Local\\lvim\\.git\\ --work-tree C:\\Users\\AppData\\Local\\lvim\\ commit -m 'update'<cr>",
---   "push LunarVim config" }
+-- TODO:
+local git_work_tree = "C:\\Users\\Babak\\.config\\dotfiles\\"
+local git_dir = git_work_tree .. ".git"
+lvim.builtin.which_key.mappings["L"].p = {
+  "<cmd>! git --git-dir=" .. git_dir .. " --work-tree=" .. git_work_tree .. " pull<cr>",
+  "pull dotfiles config" }

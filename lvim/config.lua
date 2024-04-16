@@ -1,5 +1,6 @@
 require("user.plugins")
 require("user.functions")
+require("user.plugins")
 require("user.which_key")
 require("user.lualine")
 require("user.os_specific")
@@ -11,3 +12,6 @@ require("user.linters")
 require("user.autocommands")
 require("user.lsp")
 require("user.python")
+
+-- TODO: use async capability so that it doesn't effect start-up time
+-- require("user.git")
