@@ -18,7 +18,6 @@ vim.keymap.set({ 'n', 'x', 'o' }, 's', '<Plug>(leap-forward)')
 vim.keymap.set({ 'n', 'x', 'o' }, 'S', '<Plug>(leap-backward)')
 vim.keymap.set({ 'n', 'x', 'o' }, 'gs', '<Plug>(leap-from-window)')
 
-
 -- Adding the following keymap, will redirect the active cmdline when pressing <S-Enter>.
 -- The cmdline stays open, so you can change the command and execute it again.
 -- When exiting the cmdline, the popup window will be focused.
@@ -48,3 +47,16 @@ end, { desc = "Redirect Cmdline" })
 --     ["<C-k>"] = actions.move_selection_previous,
 --   },
 -- }
+
+-- if lsp hover doc present, use <C-f> and <C-b> to scroll lsp window
+vim.keymap.set({ "n", "i", "s" }, "<c-f>", function()
+  if not require("noice.lsp").scroll(4) then
+    return "<c-f>"
+  end
+end, { silent = true, expr = true })
+
+vim.keymap.set({ "n", "i", "s" }, "<c-b>", function()
+  if not require("noice.lsp").scroll(-4) then
+    return "<c-b>"
+  end
+end, { silent = true, expr = true })

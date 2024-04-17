@@ -69,7 +69,7 @@ lvim.builtin.which_key.mappings["C"] = {
   l = { "<cmd>ChatGPTRun code_readability_analysis<CR>", "Code Readability Analysis", mode = { "n", "v" } },
 }
 
--- TODO:
+-- TODO: write indicator with notify
 local git_work_tree = "C:\\Users\\Babak\\.config\\dotfiles\\"
 local git_dir = git_work_tree .. ".git"
 lvim.builtin.which_key.mappings["L"].p = {
