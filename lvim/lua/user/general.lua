@@ -28,3 +28,6 @@ vim.g.clever_f_across_no_line = 1
 vim.g.vista_stay_on_open = 0
 vim.g.vista_echo_cursor = 0
 -- lvim.transparent_window = true
+
+-- check for dotfiles update on startup
+require('user.functions').get_dotfiles_update_git()

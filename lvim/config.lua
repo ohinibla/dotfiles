@@ -12,6 +12,3 @@ require("user.linters")
 require("user.autocommands")
 require("user.lsp")
 require("user.python")
-
--- TODO: use async capability so that it doesn't effect start-up time
--- require("user.git")

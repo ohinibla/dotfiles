@@ -78,8 +78,30 @@ M.show_macro_recording = function()
   if recording_register == "" then
     return ""
   else
-    return "Recording @" .. recording_register
+    return "󰑊 Recording @" .. recording_register
   end
+end
+
+-- TODO: add error handling
+M.get_dotfiles_update_git = function()
+  vim.loop.spawn("git", {
+    args = { "-C", "C:\\Users\\Babak\\.config\\dotfiles\\", "fetch" },
+    stdio = { nil, nil, nil }
+  }, function(code)
+    if code ~= 0 then
+      local handle = io.popen("git -C C:\\Users\\Babak\\.config\\dotfiles\\ status")
+      local result = handle:read("*a")
+      handle:close()
+
+      if string.match(result, "Your branch is behind") or string.match(result, "Your branch and 'origin/main' have diverged") then
+        vim.notify("Update available for dotfiles repository  ", "warn")
+      else
+        vim.notify("No update available for dotfiles repository ", "info")
+      end
+    else
+      vim.notify("there was an error fetching dotfiles updates 😢", "error")
+    end
+  end)
 end
 
 return M

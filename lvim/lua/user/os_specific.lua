@@ -1,13 +1,14 @@
 -- os specific config
+vim.notify = require("notify")
 
 if (vim.fn.has('linux') == 1)
 then
-  vim.notify("os specific python venv path...LINUX", vim.log.levels.WARN)
+  vim.notify("os specific python venv path...LINUX", "info")
   -- set proper virtual env
   vim.g.python3_host_prog = "/home/babak/.pyenv/versions/neovim/bin/python"
 elseif (vim.fn.has('win32') == 1)
 then
-  vim.notify("os specific python venv path...WIN32", vim.log.levels.WARN)
+  vim.notify("os specific python venv path...WIN32", "info")
   -- Enable powershell as your default shell
   vim.opt.shell = "pwsh.exe"
   vim.opt.shellcmdflag =
