@@ -1,5 +1,5 @@
 -- Use which-key to add extra bindings with the leader-key prefix
-lvim.builtin.which_key.mappings["P"] = { "<cmd>Telescope projects<CR>", "Projects" }
+lvim.builtin.which_key.mappings["P"] = { "<cmd>Telescope projects<CR>", "Projects  " }
 lvim.builtin.which_key.mappings["t"] = {
   name = "+Trouble",
   r = { "<cmd>Trouble lsp_references<cr>", "References" },
@@ -16,7 +16,7 @@ lvim.builtin.which_key.mappings["s"]["T"] = {
 }
 
 lvim.builtin.which_key.vmappings["s"] = {
-  "<cmd>lua require('ssr').open()<CR>", "search and replace"
+  "<cmd>lua require('ssr').open()<CR>", "search and replace  "
 }
 
 lvim.builtin.which_key.mappings["z"] = {
@@ -32,10 +32,10 @@ lvim.builtin.which_key.mappings["g"]["g"] = {
 }
 
 lvim.builtin.which_key.mappings["g"]["h"] = {
-  gh_workflow_toggle, "Github Actions"
+  gh_workflow_toggle, "Github Actions  "
 }
 
-lvim.builtin.which_key.mappings["q"] = { "<cmd>confirm q<CR>", "Quit" }
+lvim.builtin.which_key.mappings["q"] = { "<cmd>confirm q<CR>", "Quit ❌" }
 lvim.builtin.which_key.mappings["n"] = { "<cmd>Noice dismiss<CR>", "Noice dismiss" }
 
 require("which-key").register {
@@ -53,7 +53,7 @@ require("which-key").register {
 }
 
 lvim.builtin.which_key.mappings["C"] = {
-  name = "ChatGPT",
+  name = "ChatGPT 🤖",
   c = { "<cmd>ChatGPT<CR>", "ChatGPT" },
   e = { "<cmd>ChatGPTEditWithInstruction<CR>", "Edit with instruction", mode = { "n", "v" } },
   g = { "<cmd>ChatGPTRun grammar_correction<CR>", "Grammar Correction", mode = { "n", "v" } },
