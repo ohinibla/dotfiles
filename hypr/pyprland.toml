@@ -82,7 +82,7 @@ size = "75% 60%"
 unknown = "wlrlui"
 
 [monitors.placement]
-"Ancor".leftOf = ["LG"]
+# "Ancor".leftOf = ["LG"]
 #<D-a> "Sony".topOf = ["Brand X"]
 
 [layout_center]
