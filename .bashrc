@@ -128,7 +128,7 @@ eval "$(pyenv virtualenv-init -)"
 
 export PATH="$PATH:/opt/nvim-linux64/bin"
 export POETRY_ROOT=~/.cache/pypoetry/
-export EDITOR=/usr/bin/nvim
+export EDITOR=/usr/local/bin/lvim
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm

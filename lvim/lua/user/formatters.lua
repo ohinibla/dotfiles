@@ -4,6 +4,7 @@ formatters.setup {
   -- { command = "black",    filetypes = { "python" } },
   -- { command = "autopep8", filetypes = { "python" } },
   -- { command = "isort",    filetypes = { "python" } },
+  { command = "codespell" },
   {
     -- each formatter accepts a list of options identical to https://github.com/jose-elias-alvarez/null-ls.nvim/blob/main/doc/BUILTINS.md#Configuration
     command = "prettier",

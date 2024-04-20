@@ -38,20 +38,20 @@ command = "kitty --class kitty-dropterm2"
 class = "kitty-dropterm2"
 size = "75% 60%"
 
+[scratchpads.volume]
+animation = "fromRight"
+command = "pavucontrol"
+class = "pavucontrol"
+size = "40% 90%"
+unfocus = "hide"
+lazy = true
+
 [scratchpads.term]
 animation = "fromTop"
 command = "kitty --class kitty-dropterm"
 class = "kitty-dropterm"
 unfocus = "hide"
 size = "75% 60%"
-
-[scratchpads.volume]
-animation = "fromRight"
-command = "kitty --class pavucontrol -e pulsemixer"
-class = "pavucontrol"
-lazy = true
-size = "75% 60%"
-unfocus = "hide"
 
 [scratchpads.music]
 animation = "fromTop"
@@ -82,7 +82,7 @@ size = "75% 60%"
 unknown = "wlrlui"
 
 [monitors.placement]
-"Ancor".leftOf = ["LG"]
+# "Ancor".leftOf = ["LG"]
 #<D-a> "Sony".topOf = ["Brand X"]
 
 [layout_center]
