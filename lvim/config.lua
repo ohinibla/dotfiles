@@ -1,6 +1,5 @@
 require("user.plugins")
 require("user.functions")
-require("user.plugins")
 require("user.which_key")
 require("user.lualine")
 require("user.os_specific")

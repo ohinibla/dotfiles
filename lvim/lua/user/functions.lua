@@ -60,6 +60,25 @@ M.gh_workflow_list = function()
     direction = "vertical",
     auto_scroll = true,
     close_on_exit = false,
+    on_open = function(_)
+      vim.cmd "startinsert!"
+    end,
+    count = 98,
+  }
+  workflow:toggle(40)
+end
+
+M.gh_workflow_run_and_list = function()
+  local Terminal = require("toggleterm.terminal").Terminal
+  local workflow = Terminal:new {
+    cmd = "gh workflow run",
+    hidden = true,
+    direction = "vertical",
+    auto_scroll = true,
+    close_on_exit = true,
+    on_exit = function ()
+      M.gh_workflow_list()
+    end,
     count = 98,
   }
   workflow:toggle(40)
