@@ -15,6 +15,14 @@ lvim.builtin.which_key.mappings["s"]["T"] = {
   "<CMD>!ctags -R %<CR><CMD>Telescope tags<CR>", "Search Workspace tags"
 }
 
+lvim.builtin.which_key.mappings["s"]["d"] = {
+  "<CMD>TodoTelescope<CR>", "Search TODO"
+}
+
+lvim.builtin.which_key.mappings["s"]["m"] = {
+  ":Telescope vim_bookmarks<CR>", "Search marks "
+}
+
 lvim.builtin.which_key.vmappings["s"] = {
   "<cmd>lua require('ssr').open()<CR>", "search and replace  "
 }
@@ -26,13 +34,16 @@ lvim.builtin.which_key.mappings["z"] = {
 
 local lazygit_toggle = require("user.functions").lazygit_toggle
 local gh_workflow_toggle = require("user.functions").gh_workflow_list
+local gh_workflow_run_watch = require("user.functions").gh_workflow_run_and_list
 
 lvim.builtin.which_key.mappings["g"]["g"] = {
   lazygit_toggle, "LazyGit"
 }
 
 lvim.builtin.which_key.mappings["g"]["h"] = {
-  gh_workflow_toggle, "Github Actions  "
+  name = "Github Actions  ",
+  w = {gh_workflow_toggle, "Github Workflow watch"},
+  r = {gh_workflow_run_watch, "Github Workflow run and watch"}
 }
 
 lvim.builtin.which_key.mappings["q"] = { "<cmd>confirm q<CR>", "Quit ❌" }
@@ -70,8 +81,15 @@ lvim.builtin.which_key.mappings["C"] = {
 }
 
 -- TODO: write indicator with notify
-local git_work_tree = "C:\\Users\\Babak\\.config\\dotfiles\\"
-local git_dir = git_work_tree .. ".git"
+-- local git_work_tree = "C:\\Users\\Babak\\.config\\dotfiles\\"
+-- local git_dir = git_work_tree .. ".git"
+-- lvim.builtin.which_key.mappings["L"].p = {
+--   "<cmd>! git --git-dir=" .. git_dir .. " --work-tree=" .. git_work_tree .. " pull<cr>",
+--   "pull dotfiles config" }
+
 lvim.builtin.which_key.mappings["L"].p = {
-  "<cmd>! git --git-dir=" .. git_dir .. " --work-tree=" .. git_work_tree .. " pull<cr>",
-  "pull dotfiles config" }
+{
+  "<CMD>lua require('user.functions').get_dotfiles_update_git()<CR>",
+  "check dotfiles for updates" }
+}
+

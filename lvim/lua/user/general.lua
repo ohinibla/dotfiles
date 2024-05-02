@@ -1,3 +1,11 @@
+--   ____ _____ _   _ _____ ____      _    _
+--  / ___| ____| \ | | ____|  _ \    / \  | |
+-- | |  _|  _| |  \| |  _| | |_) |  / _ \ | |
+-- | |_| | |___| |\  | |___|  _ <  / ___ \| |___
+--  \____|_____|_| \_|_____|_| \_\/_/   \_\_____|
+--
+--
+
 -- neovide font
 vim.opt.termguicolors = true
 vim.opt.guifont = "JetBrainsMono Nerd Font:h12"
@@ -5,10 +13,9 @@ vim.opt.background = "dark"
 -- lvim.colorscheme = "gruvbox"
 lvim.colorscheme = "kanagawa"
 
-
 -- general
 lvim.log.level = "warn"
-lvim.format_on_save = true
+
 vim.opt.relativenumber = true
 -- vim.g.tagbar_silent = 1
 --
@@ -28,6 +35,3 @@ vim.g.clever_f_across_no_line = 1
 vim.g.vista_stay_on_open = 0
 vim.g.vista_echo_cursor = 0
 -- lvim.transparent_window = true
-
--- check for dotfiles update on startup
-require('user.functions').get_dotfiles_update_git()
