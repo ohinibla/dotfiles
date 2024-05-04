@@ -1,0 +1,5 @@
+//@theme "/usr/share/rofi/themes/gruvbox-dark-hard.rasi"
+//@theme "/usr/share/rofi/themes/gruvbox-dark.rasi"
+@theme "/usr/share/rofi/themes/purple.rasi"
+
+# drun: {enabled: true, paths: ["/usr/share/applications/", "/usr/local/share/applications/", "/home/babak/.local/share/applications/"]}

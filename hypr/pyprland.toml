@@ -78,10 +78,10 @@ class = "htop"
 lazy= true
 size = "75% 60%"
 
-[monitors]
-unknown = "wlrlui"
+# [monitors]
+# unknown = "wlrlui"
 
-[monitors.placement]
+# [monitors.placement]
 # "Ancor".leftOf = ["LG"]
 #<D-a> "Sony".topOf = ["Brand X"]
 
