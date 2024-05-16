@@ -28,7 +28,7 @@ for _, plugin in ipairs({
 			"nvim-treesitter/nvim-treesitter",
 		},
 	},
-	{ "NVIM-NEOTEST/NEOTEST-PYTHON" },
+	{ "nvim-neotest/neotest-python" },
 }) do
 	lvim.plugins[#lvim.plugins + 1] = plugin
 end
@@ -73,7 +73,7 @@ require("neotest").setup({
 				console = "integratedTerminal",
 			},
 			args = { "--log-level", "DEBUG", "--quiet" },
-			runner = "pytest",
+			runner = "unittest",
 			python = function()
 				if vim.fn.has("linux") == 1 then
 					OS_PYTHON_BIN = "bin"
