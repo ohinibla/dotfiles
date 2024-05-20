@@ -150,6 +150,7 @@ function ya() {
 
 alias ls="lsd"
 alias la="ll -a"
+alias dotfiles="cd ~/.config/dotfiles"
 
 # -------------------------------------
 # bashrc end
