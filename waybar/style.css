@@ -1,24 +1,51 @@
+@define-color rosewater #dc8a78;
+@define-color flamingo #dd7878;
+@define-color pink #ea76cb;
+@define-color mauve #8839ef;
+@define-color red #d20f39; 
+@define-color maroon #e64553;
+@define-color peach #fe640b;
+@define-color yellow #df8e1d;
+@define-color green #40a02b;
+@define-color teal #179299;
+@define-color sky #04a5e5;
+@define-color sapphire #209fb5;
+@define-color blue #1e66f5;
+@define-color lavender #7287fd;
+@define-color text #4c4f69;
+@define-color subtext1 #5c5f77;
+@define-color subtext0 #6c6f85;
+@define-color overlay2 #7c7f93;
+@define-color overlay1 #8c8fa1;
+@define-color overlay0 #9ca0b0;
+@define-color surface2 #acb0be;
+@define-color surface1 #bcc0cc;
+@define-color surface0 #ccd0da;
+@define-color base #eff1f5;
+@define-color mantle #e6e9ef;
+@define-color crust #dce0e8;
+
 @define-color bg-hover #272E32;
 @define-color lbg #2D363B;
 @define-color bg #141b1f;
-@define-color blue #A2C8C3;
-@define-color sky #A2C8C3;
-@define-color red #E67E80;
-@define-color pink #f28779;
-@define-color lavender #D699B6;
-@define-color rosewater #f07178;
-@define-color flamingo #f07178;
+/* @define-color blue #A2C8C3; */
+/* @define-color sky #A2C8C3; */
+/* @define-color red #E67E80; */
+/* @define-color pink #f28779; */
+/* @define-color lavender #D699B6; */
+/* @define-color rosewater #f07178; */
+/* @define-color flamingo #f07178; */
 @define-color fg #D3C6AA;
-@define-color green #B2C98F;
+/* @define-color green #B2C98F; */
 @define-color active-green #B2C98F;
 @define-color dark-fg #9DA9A0;
-@define-color peach #f2966b;
+/* @define-color peach #f2966b; */
 @define-color border @lavender;
 @define-color gray2 #9DA9A0;
 @define-color black4 #0d1017;
 @define-color black3 #131721;
-@define-color maroon #d95757;
-@define-color yellow #FF8F40;
+/* @define-color maroon #d95757; */
+/* @define-color yellow #FF8F40; */
 
 * {
   min-height: 0;
@@ -115,6 +142,15 @@ window#waybar {
 }
 
 #idle_inhibitor {
+  margin: 5px 5px 2px 5px;
+  padding-left: 10px;
+  padding-right: 12px;
+  border-radius: 7px;
+  background-color: @bg;
+  color: @fg;
+}
+
+#language {
   margin: 5px 5px 2px 5px;
   padding-left: 10px;
   padding-right: 12px;

@@ -12,7 +12,7 @@
     "cpu",
     "temperature",
     "memory",
-    "idle_inhibitor",
+    // "idle_inhibitor",
     "network",
     "pulseaudio",
     "bluetooth",
