@@ -13,6 +13,7 @@ for _, plugin in ipairs({
 	"dadbod",
 	"ssr",
 	"nvim-treesitter-objects",
+  "cord",
 	"bookmarks",
 	-- "nvim-colorizer",
 	"figlet",
