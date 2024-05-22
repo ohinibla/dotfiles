@@ -10,6 +10,7 @@ for _, plugin in ipairs({
 	"trouble",
 	"todo-comments",
 	"tint",
+	"dadbod",
 	"ssr",
 	"nvim-treesitter-objects",
 	"bookmarks",
