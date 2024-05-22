@@ -16,6 +16,7 @@ lvim.keys.insert_mode["jk"] = "<ESC>"
 lvim.keys.normal_mode["<F8>"] = ":Vista!!<CR>"
 lvim.keys.normal_mode["<F9>"] = vim.cmd.UndotreeToggle
 lvim.keys.normal_mode["ms"] = ":Telescope bookmarks list<CR>"
+lvim.keys.normal_mode["<C-E>"] = "ct"
 -- lvim.keys.normal_mode["gx"] = [[:execute '!firefox ' . shellescape(expand('<cfile>'), 1)<CR>]]
 -- leap mappings
 vim.keymap.set({ "n", "x", "o" }, "s", "<Plug>(leap-forward)")
