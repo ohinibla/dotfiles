@@ -115,6 +115,7 @@ lvim.builtin.which_key.mappings["dF"] = {
 	"Test Class DAP",
 }
 lvim.builtin.which_key.mappings["dS"] = { "<cmd>lua require('neotest').summary.toggle()<cr>", "Test Summary" }
+lvim.builtin.which_key.mappings["da"] = { "<cmd>lua require('neotest').output_panel.toggle()<cr>", "Test Output" }
 
 -- binding for switching
 lvim.builtin.which_key.mappings["dz"] = {
