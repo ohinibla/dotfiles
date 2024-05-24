@@ -1,6 +1,7 @@
 return {
   "levouh/tint.nvim",
-  opts = {
-    require("tint").setup()
-  }
+  -- opts = {
+  --   require("tint").setup()
+  -- }
+  opts = {}
 }

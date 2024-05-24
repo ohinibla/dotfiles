@@ -1,7 +1,7 @@
 return {
   "jackMort/ChatGPT.nvim",
   -- event = "VeryLazy",
-  cmd = { "ChatGPT", "ChatGPTRun", "ChatGPTEditWithInstructions", "ChatGPTActAsj", "ChatGPTCompeleteCode" },
+  cmd = { "ChatGPT", "ChatGPTRun", "ChatGPTEditWithInstructions", "ChatGPTActAs", "ChatGPTCompeleteCode" },
   -- keys = "<leader>C",
   config = function()
     require("chatgpt").setup(
