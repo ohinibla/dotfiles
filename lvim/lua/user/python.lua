@@ -72,7 +72,7 @@ require("neotest").setup({
 				justMyCode = false,
 				console = "integratedTerminal",
 			},
-			args = { "--log-level", "DEBUG", "--quiet" },
+			-- args = { "--log-level", "DEBUG", "--quiet" },
 			runner = "unittest",
 			python = function()
 				if vim.fn.has("linux") == 1 then
