@@ -3,5 +3,9 @@ return {
   event = "VeryLazy",
   dependencies = {
     "numToStr/Comment.nvim"
+  },
+  build = {
+    "npm install -g figlet"
   }
+
 }

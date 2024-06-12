@@ -53,11 +53,24 @@ class = "kitty-dropterm"
 unfocus = "hide"
 size = "75% 60%"
 
+[scratchpads.nekoray]
+animation = "fromTop"
+command = "~/.local/bin/nekoray"
+class = "nekoray"
+size = "75% 60%"
+
 [scratchpads.music]
 animation = "fromTop"
 command = "kitty --class music -e ytermusic-proxy"
 class = "music"
 size = "75% 60%"
+
+[scratchpads.ytm]
+animation = "fromTop"
+command = "ytm"
+class = "ytm"
+unfocus = "hide"
+size = "80% 80%"
 
 [scratchpads.file]
 animation = "fromTop"

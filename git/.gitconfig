@@ -1,5 +1,12 @@
 [user]
 	email = ohinibla@gmail.com
 	name = ohinibla
+	signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIAU+vZF1lE0OiHUwVa7qkAtIdjqS1h7oWgJymXzSSJSO
 [alias]
 	lg = log --color --graph --date=format:'%Y-%m-%d %H:%M:%S' --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%ad) %C(bold blue)<%an>%Creset'
+[gpg]
+	format = ssh
+[gpg "ssh"]
+	program = /opt/1Password/op-ssh-sign
+[commit]
+	gpgsign = true

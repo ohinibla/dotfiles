@@ -9,7 +9,7 @@ for _, plugin in ipairs({
 	"undotree",
 	"trouble",
 	"todo-comments",
-	"tint",
+  "tint",
 	"dadbod",
 	"ssr",
 	"nvim-treesitter-objects",
@@ -29,8 +29,8 @@ for _, plugin in ipairs({
 	"dressing",
 	"clever-f",
 	"ChatGPT",
-	"kanagawa",
 	"nvim-nio",
+  "kanagawa",
 }) do
 	lvim.plugins[#lvim.plugins + 1] = require("user.plugins_dir." .. plugin)
 end
