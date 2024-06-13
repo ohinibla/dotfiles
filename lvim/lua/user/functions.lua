@@ -41,6 +41,10 @@ M.lazygit_toggle = function()
       -- border = "none",
       -- width = 100000,
       -- height = 100000,
+      -- Percentage of the Neovim window's width
+      width = function() return math.floor(vim.o.columns * 0.95) end,
+      -- Percentage of the Neovim window's height
+      height = function() return math.floor(vim.o.lines * 0.95) end,
       border = "curved",
     },
     on_open = function(_)
@@ -77,6 +81,7 @@ M.gh_workflow_run_and_list = function()
     auto_scroll = true,
     close_on_exit = true,
     on_exit = function ()
+      vim.cmd("sleep 1000m")
       M.gh_workflow_list()
     end,
     count = 98,
