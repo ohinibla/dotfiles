@@ -17,6 +17,7 @@ lvim.keys.normal_mode["<F8>"] = ":Vista!!<CR>"
 lvim.keys.normal_mode["<F9>"] = vim.cmd.UndotreeToggle
 lvim.keys.normal_mode["ms"] = ":Telescope bookmarks list<CR>"
 lvim.keys.normal_mode["<C-E>"] = "ct"
+lvim.keys.normal_mode["<C-T>"] = "dt"
 lvim.keys.normal_mode["<C-W>"] = "ciw"
 lvim.keys.normal_mode['<C-\">'] = 'ci\"'
 lvim.keys.normal_mode["?"] = vim.cmd.ChatGPT
