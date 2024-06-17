@@ -1,0 +1,15 @@
+{
+  "answer_with_context": {
+    "type": "chat",
+    "opts": {
+      "template": "keep this code snippet in the context and answer questions about it. be brief as possible but provide more explanation if needed or asked:\n\n```{{filetype}}\n{{input}}\n```",
+      "strategy": "edit",
+      "params": {
+        "model": "gpt-4o",
+        "stop": [
+          "```"
+        ]
+      }
+    }
+  }
+}

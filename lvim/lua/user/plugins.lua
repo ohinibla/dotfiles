@@ -28,7 +28,7 @@ for _, plugin in ipairs({
 	"glow",
 	"dressing",
 	"clever-f",
-	"ChatGPT",
+	"ChatGPT.ChatGPT",
 	"nvim-nio",
   "kanagawa",
 }) do

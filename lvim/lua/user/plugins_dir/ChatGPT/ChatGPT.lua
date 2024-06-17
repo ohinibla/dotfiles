@@ -10,7 +10,8 @@ return {
         extra_curl_params = {
           "--socks5",
           "127.0.0.1:10808"
-        }
+        },
+        actions_paths = {vim.fn.expand("~/.config/dotfiles/lvim/lua/user/plugins_dir/ChatGPT/actions.json")}
       })
   end,
   dependencies = {
