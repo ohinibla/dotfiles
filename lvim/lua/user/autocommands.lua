@@ -56,3 +56,10 @@ vim.api.nvim_create_autocmd("BufEnter", {
     vim.api.nvim_set_keymap('n', '@P', '^yiwopIprint(A)', {noremap=true, silent=true})
   end,
 })
+
+vim.api.nvim_create_autocmd("BufEnter", {
+  pattern = {'*.json'},
+  callback = function ()
+    vim.opt.foldmethod="indent"
+  end,
+})

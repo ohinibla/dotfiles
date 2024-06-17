@@ -30,7 +30,6 @@ lvim.builtin.which_key.vmappings["s"] = {
 lvim.builtin.which_key.mappings["z"] = {
   name = "Extra",
   e = { "<CMD>IconPickerInsert<CR>", "Icon Picker -> Insert ⌣" },
-  f = {"<CMD>set foldmethod=indent<CR>", "fold method -> indent "}
 }
 
 local lazygit_toggle = require("user.functions").lazygit_toggle
