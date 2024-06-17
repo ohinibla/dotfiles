@@ -121,7 +121,3 @@ lvim.builtin.which_key.mappings["da"] = { "<cmd>lua require('neotest').output_pa
 lvim.builtin.which_key.mappings["dz"] = {
 	{ "<CMD>VenvSelect<CR>'", "Choose Env  " },
 }
-
-lvim.builtin.which_key.mappings["dx"] = {
-	{ "<cmd>VenvSelectCached<cr>", "Choose Env cached 󰸧 " },
-}
