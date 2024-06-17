@@ -60,6 +60,6 @@ vim.api.nvim_create_autocmd("BufEnter", {
 vim.api.nvim_create_autocmd("BufEnter", {
   pattern = {'*.json'},
   callback = function ()
-    vim.opt.foldmethod="indent"
+    vim.opt_local.foldmethod="indent"
   end,
 })
