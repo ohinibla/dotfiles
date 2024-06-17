@@ -29,7 +29,8 @@ lvim.builtin.which_key.vmappings["s"] = {
 
 lvim.builtin.which_key.mappings["z"] = {
   name = "Extra",
-  e = { "<CMD>IconPickerInsert<CR>", "Icon Picker -> Insert" },
+  e = { "<CMD>IconPickerInsert<CR>", "Icon Picker -> Insert ⌣" },
+  f = {"<CMD>set foldmethod=indent<CR>", "fold method -> indent "}
 }
 
 local lazygit_toggle = require("user.functions").lazygit_toggle
@@ -78,6 +79,7 @@ lvim.builtin.which_key.mappings["C"] = {
   x = { "<cmd>ChatGPTRun explain_code<CR>", "Explain Code", mode = { "n", "v" } },
   r = { "<cmd>ChatGPTRun roxygen_edit<CR>", "Roxygen Edit", mode = { "n", "v" } },
   l = { "<cmd>ChatGPTRun code_readability_analysis<CR>", "Code Readability Analysis", mode = { "n", "v" } },
+  z = { "<cmd>ChatGPTRun answer_with_context<CR>", "explain continuously (gpt-4o 󰚩 ) ", mode = { "n", "v" } },
 }
 
 -- TODO: write indicator with notify
