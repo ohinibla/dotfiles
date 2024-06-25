@@ -61,5 +61,7 @@ vim.api.nvim_create_autocmd("BufEnter", {
   pattern = {'*.json'},
   callback = function ()
     vim.opt_local.foldmethod="indent"
+    -- open all folds
+    vim.cmd("zR")
   end,
 })
