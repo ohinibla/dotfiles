@@ -64,6 +64,11 @@ animation = "fromTop"
 command = "kitty --class music -e ytermusic-proxy"
 class = "music"
 size = "75% 60%"
+[scratchpads.chatbox]
+animation = "fromLeft"
+command = "~/.local/bin/Chatbox-1.3.14-x86_64.AppImage"
+class = "chatbox"
+size = "80% 80%"
 
 [scratchpads.ytm]
 animation = "fromTop"
