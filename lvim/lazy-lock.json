@@ -21,6 +21,7 @@
   "goto-preview": { "branch": "main", "commit": "1519ea3512828c944eed5b2bbb66a8f8deb92447" },
   "gruvbox.nvim": { "branch": "main", "commit": "7a1b23e4edf73a39642e77508ee6b9cbb8c60f9e" },
   "icon-picker.nvim": { "branch": "master", "commit": "3ee9a0ea9feeef08ae35e40c8be6a2fa2c20f2d3" },
+  "in-and-out.nvim": { "branch": "master", "commit": "ab24cafadc3418dffb0c7e9b0621cff60b9ac551" },
   "indent-blankline.nvim": { "branch": "master", "commit": "9637670896b68805430e2f72cf5d16be5b97a22a" },
   "kanagawa.nvim": { "branch": "master", "commit": "e5f7b8a804360f0a48e40d0083a97193ee4fcc87" },
   "lazy.nvim": { "branch": "main", "commit": "8f19915175395680808de529e4220da8dafc0759" },

@@ -8,14 +8,18 @@ end
 for _, plugin in ipairs({
 	{
 		"linux-cultist/venv-selector.nvim",
-		dependencies = { "neovim/nvim-lspconfig", "nvim-telescope/telescope.nvim", "mfussenegger/nvim-dap-python" },
-		opts = {
-			-- Your options go here
-			-- name = "venv",
-			-- auto_refresh = false
-			poetry_path = poetry_path_sys,
+		dependencies = {
+			"neovim/nvim-lspconfig",
+			"mfussenegger/nvim-dap",
+			"mfussenegger/nvim-dap-python", --optional
+			{ "nvim-telescope/telescope.nvim", branch = "0.1.x", dependencies = { "nvim-lua/plenary.nvim" } },
 		},
-		event = "VeryLazy", -- Optional: needed only if you want to type `:VenvSelect` without a keymapping
+		lazy = false,
+		branch = "regexp", -- This is the regexp branch, use this for the new version
+		poetry_path = poetry_path_sys,
+		config = function()
+			require("venv-selector").setup()
+		end,
 	},
 	{ "stevearc/dressing.nvim" },
 	{ "mfussenegger/nvim-dap-python" },
