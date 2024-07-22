@@ -25,6 +25,7 @@ for _, plugin in ipairs({
 	"icon-picker",
 	"gruvbox",
 	"goto-preview",
+	"in_and_out",
 	"glow",
 	"dressing",
 	"clever-f",
