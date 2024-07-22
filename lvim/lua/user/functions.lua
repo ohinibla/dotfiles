@@ -59,14 +59,14 @@ end
 M.gh_workflow_list = function()
   local Terminal = require("toggleterm.terminal").Terminal
   local workflow = Terminal:new {
-    cmd = "gh run watch",
+    cmd = "gh run watch $(gh run list --limit 1 --json databaseId --jq '.[0].databaseId')",
     hidden = true,
     direction = "vertical",
     auto_scroll = true,
     close_on_exit = false,
-    on_open = function(_)
-      vim.cmd "startinsert!"
-    end,
+    -- on_open = function(_)
+    --   vim.cmd "startinsert!"
+    -- end,
     count = 98,
   }
   workflow:toggle(40)
