@@ -43,14 +43,12 @@ animation = "fromRight"
 command = "pavucontrol"
 class = "pavucontrol"
 size = "40% 90%"
-unfocus = "hide"
 lazy = true
 
 [scratchpads.term]
 animation = "fromTop"
 command = "kitty --class kitty-dropterm"
 class = "kitty-dropterm"
-unfocus = "hide"
 size = "75% 60%"
 
 [scratchpads.nekoray]
@@ -59,14 +57,9 @@ command = "~/.local/bin/nekoray"
 class = "nekoray"
 size = "75% 60%"
 
-[scratchpads.music]
-animation = "fromTop"
-command = "kitty --class music -e ytermusic-proxy"
-class = "music"
-size = "75% 60%"
 [scratchpads.chatbox]
 animation = "fromLeft"
-command = "~/.local/bin/Chatbox-1.3.14-x86_64.AppImage"
+command = "~/.local/bin/Chatbox-1.3.17-x86_64.AppImage"
 class = "chatbox"
 size = "80% 80%"
 

@@ -8,11 +8,13 @@ end
 for _, plugin in ipairs({
 	{
 		"linux-cultist/venv-selector.nvim",
-		dependencies = {
-			"neovim/nvim-lspconfig",
-			"mfussenegger/nvim-dap",
-			"mfussenegger/nvim-dap-python", --optional
-			{ "nvim-telescope/telescope.nvim", branch = "0.1.x", dependencies = { "nvim-lua/plenary.nvim" } },
+		dependencies = { "neovim/nvim-lspconfig", "nvim-telescope/telescope.nvim", "mfussenegger/nvim-dap-python" },
+    branch = "regexp",
+		opts = {
+			-- Your options go here
+			-- name = "venv",
+			-- auto_refresh = false
+			poetry_path = poetry_path_sys,
 		},
 		lazy = false,
 		branch = "regexp", -- This is the regexp branch, use this for the new version
@@ -52,6 +54,7 @@ formatters.setup({
 -- setup debug adapter
 lvim.builtin.dap.active = true
 local mason_path = vim.fn.glob(vim.fn.stdpath("data") .. "/mason/")
+print(mason_path)
 pcall(function()
 	local os_python_bin = ""
 	if vim.fn.has("linux") == 1 then
@@ -59,8 +62,9 @@ pcall(function()
 	else
 		os_python_bin = "Scripts"
 	end
-	require("dap-python").setup(mason_path .. "packages/debugpy/venv/" .. os_python_bin .. "/pythonw")
+	require("dap-python").setup(mason_path .. "packages/debugpy/venv/" .. os_python_bin .. "/python")
 end)
+
 
 -- neotest-python config
 -- setup testing

@@ -15,4 +15,10 @@ linters.setup({
 		-- filetypes = { "javascript", "python" },
 		filetypes = { "*" },
 	},
+--   {
+--   command = "mypy",
+--   ---@usage specify which filetypes to enable. By default a providers will attach to all the filetypes it supports.
+--   -- filetypes = { "javascript", "python" },
+--   filetypes = { "python" },
+-- }
 })

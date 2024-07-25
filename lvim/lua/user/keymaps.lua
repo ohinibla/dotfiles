@@ -19,7 +19,7 @@ lvim.keys.normal_mode["ms"] = ":Telescope bookmarks list<CR>"
 lvim.keys.normal_mode["<C-E>"] = "ct"
 lvim.keys.normal_mode["<C-T>"] = "dt"
 lvim.keys.normal_mode["<C-W>"] = "ciw"
-lvim.keys.normal_mode['<C-\">'] = 'ci\"'
+lvim.keys.normal_mode["<C-S>"] = 'ciw""<ESC>hp'
 lvim.keys.normal_mode["?"] = vim.cmd.ChatGPT
 
 -- lvim.keys.normal_mode["gx"] = [[:execute '!firefox ' . shellescape(expand('<cfile>'), 1)<CR>]]
