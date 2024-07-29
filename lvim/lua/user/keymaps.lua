@@ -22,6 +22,54 @@ lvim.keys.normal_mode["<C-W>"] = "ciw"
 lvim.keys.normal_mode["<C-S>"] = 'ciw""<ESC>hp'
 lvim.keys.normal_mode["?"] = vim.cmd.ChatGPT
 
+---------------------------------------------------------------
+-- TODO: change this
+vim.api.nvim_create_user_command('AppendNewlineToA', function()
+    vim.fn.setreg('a', vim.fn.getreg('a') .. '\n')
+end, {})
+
+vim.api.nvim_set_keymap('n', '@x', ':AppendNewlineToA<CR>', { noremap = true, silent = true })
+---------------------------------------------------------------
+
+
+lvim.keys.normal_mode["<C-E>"] = "ct"
+lvim.keys.normal_mode["<C-S>"] = 'ciw""<ESC>hp'
+lvim.keys.normal_mode["<C-T>"] = "dt"
+lvim.keys.normal_mode["<C-S>"] = 'ciw""<ESC>hp'
+lvim.keys.normal_mode["?"] = vim.cmd.ChatGPT
+lvim.keys.normal_mode["<C-S>"] = 'ciw""<ESC>hp'
+lvim.keys.normal_mode["?"] = vim.cmd.ChatGPT
+
+lvim.keys.normal_mode["<C-E>"] = "ct"
+lvim.keys.normal_mode["<C-S>"] = 'ciw""<ESC>hp'
+lvim.keys.normal_mode["<C-T>"] = "dt"
+lvim.keys.normal_mode["<C-S>"] = 'ciw""<ESC>hp'
+lvim.keys.normal_mode["?"] = vim.cmd.ChatGPT
+lvim.keys.normal_mode["<C-S>"] = 'ciw""<ESC>hp'
+lvim.keys.normal_mode["?"] = vim.cmd.ChatGPT
+
+lvim.keys.normal_mode["<C-E>"] = "ct"
+lvim.keys.normal_mode["<C-S>"] = 'ciw""<ESC>hp'
+lvim.keys.normal_mode["<C-T>"] = "dt"
+lvim.keys.normal_mode["<C-S>"] = 'ciw""<ESC>hp'
+lvim.keys.normal_mode["?"] = vim.cmd.ChatGPT
+lvim.keys.normal_mode["<C-S>"] = 'ciw""<ESC>hp'
+lvim.keys.normal_mode["?"] = vim.cmd.ChatGPT
+
+lvim.keys.normal_mode["<C-E>"] = "ct"
+lvim.keys.normal_mode["<C-S>"] = 'ciw""<ESC>hp'
+lvim.keys.normal_mode["<C-T>"] = "dt"
+lvim.keys.normal_mode["<C-S>"] = 'ciw""<ESC>hp'
+lvim.keys.normal_mode["?"] = vim.cmd.ChatGPT
+
+lvim.keys.normal_mode["<C-E>"] = "ct"
+lvim.keys.normal_mode["<C-S>"] = 'ciw""<ESC>hp'
+lvim.keys.normal_mode["<C-T>"] = "dt"
+
+
+lvim.keys.normal_mode["<C-E>"] = "ct"
+lvim.keys.normal_mode["<C-S>"] = 'ciw""<ESC>hp'
+
 -- lvim.keys.normal_mode["gx"] = [[:execute '!firefox ' . shellescape(expand('<cfile>'), 1)<CR>]]
 -- leap mappings
 vim.keymap.set({ "n", "x", "o" }, "s", "<Plug>(leap-forward)")
