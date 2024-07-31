@@ -1,4 +1,5 @@
 require("user.plugins")
+require("user.colorschemes")
 require("user.functions")
 require("user.which_key")
 require("user.lualine")

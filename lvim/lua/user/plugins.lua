@@ -24,7 +24,6 @@ for _, plugin in ipairs({
 	"nvim-highlight-colors",
 	"easytables",
 	"icon-picker",
-	"gruvbox",
 	"goto-preview",
 	"in_and_out",
 	"glow",
@@ -32,7 +31,6 @@ for _, plugin in ipairs({
 	-- "clever-f",
 	"ChatGPT.ChatGPT",
 	"nvim-nio",
-  "kanagawa",
 }) do
 	lvim.plugins[#lvim.plugins + 1] = require("user.plugins_dir." .. plugin)
 end
