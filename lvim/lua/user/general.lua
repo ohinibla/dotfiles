@@ -35,5 +35,3 @@ vim.g.clever_f_across_no_line = 1
 vim.g.vista_stay_on_open = 0
 vim.g.vista_echo_cursor = 0
 -- lvim.transparent_window = true
-
-vim.fn.setreg('x', vim.fn.setreg('a', vim.fn.getreg('a') .. '\n'))

@@ -52,8 +52,8 @@ vim.api.nvim_create_autocmd("RecordingLeave", {
 vim.api.nvim_create_autocmd("BufEnter", {
   pattern = {'*.py'},
   callback = function ()
-    vim.api.nvim_set_keymap('n', '@p', 'Iprint(A)', {noremap=true, silent=true})
-    vim.api.nvim_set_keymap('n', '@P', '^yiwopIprint(A)', {noremap=true, silent=true})
+    vim.api.nvim_set_keymap('n', '@p', 'Iconsole.print(f"🔴🟢   {A}")', {noremap=true, silent=true})
+    vim.api.nvim_set_keymap('n', '@P', '^yiwopIconsole.print(f"🔴🟢   {A}")', {noremap=true, silent=true})
   end,
 })
 

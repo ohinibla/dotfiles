@@ -57,6 +57,12 @@ command = "~/.local/bin/nekoray"
 class = "nekoray"
 size = "75% 60%"
 
+[scratchpads.pomodoro]
+animation = "fromLeft"
+command = "flatpak run io.gitlab.idevecore.Pomodoro"
+class = "pomodoro"
+size = "15% 10px"
+
 [scratchpads.chatbox]
 animation = "fromLeft"
 command = "~/.local/bin/Chatbox-1.3.17-x86_64.AppImage"
@@ -75,12 +81,6 @@ animation = "fromTop"
 command = "kitty --class yazi -e yazi ~/mhome"
 class = "yazi"
 size = "75% 60%"
-
-[scratchpads.elia]
-animation = "fromLeft"
-command = "kitty --class elia -e elia-proxy"
-class = "elia"
-size = "85% 75%"
 
 [scratchpads.top]
 animation = "fromTop"
