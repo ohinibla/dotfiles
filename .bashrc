@@ -150,7 +150,8 @@ function ya() {
 
 alias ls="lsd"
 alias la="ll -a"
-alias dotfiles="cd ~/.config/dotfiles"
+alias dotfiles="cd /home/babak/.config/dotfiles/"
+alias qr="qrencode -t ansiutf8"
 
 # -------------------------------------
 # bashrc end
