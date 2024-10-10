@@ -9,7 +9,6 @@ for _, plugin in ipairs({
 	{
 		"linux-cultist/venv-selector.nvim",
 		dependencies = { "neovim/nvim-lspconfig", "nvim-telescope/telescope.nvim", "mfussenegger/nvim-dap-python" },
-    branch = "regexp",
 		opts = {
 			-- Your options go here
 			-- name = "venv",

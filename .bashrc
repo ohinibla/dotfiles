@@ -153,6 +153,7 @@ alias la="ll -a"
 alias dotfiles="cd /home/babak/.config/dotfiles/"
 alias qr="qrencode -t ansiutf8"
 
+eval "$(zoxide init bash)"
 # -------------------------------------
 # bashrc end
 # -------------------------------------
