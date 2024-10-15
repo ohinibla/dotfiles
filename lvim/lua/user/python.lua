@@ -1,25 +1,33 @@
 -- install plugins
-local poetry_path_sys
-if vim.fn.has("win32") == 1 then
-	poetry_path_sys = os.getenv("POETRY_ROOT") .. "virtualenvs"
-elseif vim.fn.has("linux") then
-	poetry_path_sys = "~/.cache/pypoetry/virtualenvs"
-end
+-- local poetry_path_sys
+-- if vim.fn.has("win32") == 1 then
+-- 	poetry_path_sys = os.getenv("POETRY_ROOT") .. "virtualenvs"
+-- elseif vim.fn.has("linux") then
+-- 	poetry_path_sys = "~/.cache/pypoetry/virtualenvs"
+-- end
 for _, plugin in ipairs({
 	{
 		"linux-cultist/venv-selector.nvim",
 		dependencies = { "neovim/nvim-lspconfig", "nvim-telescope/telescope.nvim", "mfussenegger/nvim-dap-python" },
-		opts = {
-			-- Your options go here
-			-- name = "venv",
-			-- auto_refresh = false
-			poetry_path = poetry_path_sys,
-		},
 		lazy = false,
 		branch = "regexp", -- This is the regexp branch, use this for the new version
-		poetry_path = poetry_path_sys,
+		-- poetry_path = poetry_path_sys,
 		config = function()
-			require("venv-selector").setup()
+			require("venv-selector").setup({
+				settings = {
+					search = {
+						poetry = {
+							command = "fd python$ ~/.cache/pypoetry/virtualenvs/",
+						},
+					},
+					options = {
+						-- poetry_path = poetry_path_sys,
+						notify_user_on_venv_activation = true, -- notifies user on activation of the virtual env
+						search_timeout = 5, -- if a search takes longer than this many seconds, stop it and alert the user
+            enable_default_searches = false,            -- switches all default searches on/off
+					},
+				},
+			})
 		end,
 	},
 	{ "stevearc/dressing.nvim" },
@@ -53,7 +61,6 @@ formatters.setup({
 -- setup debug adapter
 lvim.builtin.dap.active = true
 local mason_path = vim.fn.glob(vim.fn.stdpath("data") .. "/mason/")
-print(mason_path)
 pcall(function()
 	local os_python_bin = ""
 	if vim.fn.has("linux") == 1 then
@@ -63,7 +70,6 @@ pcall(function()
 	end
 	require("dap-python").setup(mason_path .. "packages/debugpy/venv/" .. os_python_bin .. "/python")
 end)
-
 
 -- neotest-python config
 -- setup testing
