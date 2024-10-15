@@ -19,6 +19,7 @@ for _, plugin in ipairs({
 	-- "nvim-colorizer",
 	"figlet",
 	"leap",
+  "remote-sshfs",
 	"noice",
 	-- "no-neck-pain",
 	"nvim-highlight-colors",
