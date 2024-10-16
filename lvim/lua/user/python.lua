@@ -71,6 +71,14 @@ pcall(function()
 	require("dap-python").setup(mason_path .. "packages/debugpy/venv/" .. os_python_bin .. "/python")
 end)
 
+-- TODO: according to docs, launch.js chould be loaded automatically, but doesn't seem to work.
+-- FIX: ???
+-- require("dap.ext.vscode").load_launchjs()
+local dap = require('dap')
+dap.defaults.fallback.external_terminal = {
+  command = 'wt';
+}
+
 -- neotest-python config
 -- setup testing
 
