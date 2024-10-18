@@ -1,6 +1,6 @@
 for _, plugin in ipairs({
 	{ "rebelot/kanagawa.nvim" },
-	{ "ellisonleao/gruvbox.nvim", priority = 1000, config = true },
+	-- { "ellisonleao/gruvbox.nvim", priority = 1000, config = true },
 	{
 		"olimorris/onedarkpro.nvim",
 		priority = 1000, -- Ensure it loads first

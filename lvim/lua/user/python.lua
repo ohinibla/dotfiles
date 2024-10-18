@@ -15,16 +15,16 @@ for _, plugin in ipairs({
 		config = function()
 			require("venv-selector").setup({
 				settings = {
-					search = {
-						poetry = {
-							command = "fd python$ ~/.cache/pypoetry/virtualenvs/",
-						},
-					},
+				-- 	search = {
+				-- 		poetry = {
+				-- 			command = "fd python$ ~/.cache/pypoetry/virtualenvs/",
+				-- 		},
+				-- 	},
 					options = {
 						-- poetry_path = poetry_path_sys,
 						notify_user_on_venv_activation = true, -- notifies user on activation of the virtual env
 						search_timeout = 5, -- if a search takes longer than this many seconds, stop it and alert the user
-            enable_default_searches = false,            -- switches all default searches on/off
+            enable_default_searches = true,            -- switches all default searches on/off
 					},
 				},
 			})
@@ -118,8 +118,10 @@ require("neotest").setup({
 					end
 				end
 			end,
+      pytest_discover_instances = true,
 		}),
 	},
+  status = { virtual_text = true },
 })
 
 lvim.keys.normal_mode["<F3>"] = ":!python %<CR>"
@@ -137,6 +139,8 @@ lvim.builtin.which_key.mappings["dF"] = {
 }
 lvim.builtin.which_key.mappings["dS"] = { "<cmd>lua require('neotest').summary.toggle()<cr>", "Test Summary" }
 lvim.builtin.which_key.mappings["da"] = { "<cmd>lua require('neotest').output_panel.toggle()<cr>", "Test Output" }
+lvim.builtin.which_key.mappings["dr"] = { "<cmd>lua require('dap').repl.toggle(nil, 'vsplit')<cr>", "open repl" }
+lvim.builtin.which_key.mappings["dl"] = { "<cmd>lua require('dap.ext.vscode').load_launchjs()<cr>", "load launch.json file" }
 
 -- binding for switching
 lvim.builtin.which_key.mappings["dz"] = {
